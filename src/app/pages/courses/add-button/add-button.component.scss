@@ -1,0 +1,28 @@
+.box {
+  border-radius: 3px;
+  background: #009ecc;
+  height: 36px;
+  width: 130px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 61px;
+  cursor: pointer;
+}
+
+.btn-label {
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "SourceSansPro-Semibold";
+  text-transform: none;
+  text-align: left;
+  font-weight: 600;
+  width: 72px;
+}
+
+.plus {
+  filter: invert(100%);
+  margin-right: 5px;
+}

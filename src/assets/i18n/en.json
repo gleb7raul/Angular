@@ -1,0 +1,67 @@
+{
+  "SHARED": {
+    "HEADER": {
+      "TITLE": "Video Course",
+      "LOGIN": "User Login",
+      "LOGOUT": "Log out"
+    },
+    "FOOTER": {
+      "TEXT": "Copyright © Videocourses. All rights reserved"
+    },
+    "LOADING": {
+      "TEXT": "Loading..."
+    }
+  },
+  "PAGES": {
+    "COURSES": {
+      "COURSES": {
+        "TEXT": "No data, feel free to add new course"
+      },
+      "LOAD": {
+        "TEXT": "Load More"
+      },
+      "COURSE": {
+        "EDIT": "Edit",
+        "DELETE": "Delete"
+      },
+      "ADD_BUTTON": {
+        "TEXT": "Add course"
+      },
+      "ADD_EDIT_COURSE": {
+        "NEW_COURSE": "New course",
+        "TITLE": "Title:",
+        "REQUIRED": "*required",
+        "REQ_ERROR": "This field is required.",
+        "DESCR": "Description:",
+        "CANCEL": "Cancel",
+        "SAVE": "Save"
+      },
+      "AUTHORS": {
+        "TITLE": "Authors:",
+        "LEN_ERROR": "This field must have al least 1 author.",
+        "REQUIRED": "*required",
+        "REQ_ERROR": "This field is required."
+      },
+      "DATE": {
+        "TITLE": "Date:",
+        "LEN_ERROR": "This field must be format dd/mm/yyyy.",
+        "REQUIRED": "*required",
+        "REQ_ERROR": "This field is required."
+      },
+      "DURATION": {
+        "TITLE": "Duration:",
+        "LEN_ERROR": "This field must be a number.",
+        "REQUIRED": "*required",
+        "REQ_ERROR": "This field is required."
+      }
+    },
+    "LOGIN": {
+      "TITLE": "Login",
+      "EMAIL": "Email",
+      "REQUIRED": "*required",
+      "REQ_ERROR": "This field is required.",
+      "PASSWORD": "Password",
+      "FORGOT_PASS": "Forgot password?"
+    }
+  }
+}

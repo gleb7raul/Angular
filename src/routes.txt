@@ -1,0 +1,4 @@
+/courses
+/courses/new
+/courses/edit
+/login

@@ -1,0 +1,38 @@
+<div class="label-wrappepr">
+  <label class="block-form">
+    <h3 class="text label-text">
+      {{ "PAGES.COURSES.DURATION.TITLE" | translate }}
+    </h3>
+    <h5 class="required text">
+      {{ "PAGES.COURSES.DURATION.REQUIRED" | translate }}
+    </h5>
+  </label>
+  <div *ngIf="isInvalid()" class="invalid-field">
+    <div
+      *ngIf="
+        durationControl.errors?.mustBeNumber &&
+        !durationControl.errors?.required
+      "
+    >
+      {{ "PAGES.COURSES.DURATION.LEN_ERROR" | translate }}
+    </div>
+  </div>
+  <div class="input-wrapper">
+    <div>
+      <input
+        type="text"
+        placeholder="minutes"
+        class="input date-time"
+        (blur)="onTouched()"
+        [formControl]="durationControl"
+        [class.is-invalid]="isInvalid()"
+      />
+      <div *ngIf="isInvalid()" class="invalid-field">
+        <div *ngIf="durationControl.errors?.required">
+          {{ "PAGES.COURSES.DURATION.REQ_ERROR" | translate }}
+        </div>
+      </div>
+    </div>
+    <span>{{ this.durationControl.value | duration }}</span>
+  </div>
+</div>

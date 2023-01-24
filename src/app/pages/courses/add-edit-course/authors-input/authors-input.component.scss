@@ -1,0 +1,71 @@
+.text {
+  margin: 12px 0px 8px 0px;
+}
+
+.date {
+  width: 450px;
+  height: 36px;
+}
+
+.label-wrappepr {
+  width: 457px;
+}
+
+.block-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-text {
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #474a59;
+  font-size: 14px;
+  font-family: "SourceSansPro-Semibold";
+  text-transform: none;
+  text-align: left;
+  font-weight: 600;
+  height: 24px;
+  width: 32px;
+}
+
+.input {
+  height: 36px;
+  border: 1px solid #dbd6d6;
+  text-indent: 5px;
+}
+
+.invalid-field {
+  font-size: small;
+  color: red;
+}
+
+.is-invalid {
+  border-color: red;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.author {
+  border: 1px solid rgb(85, 85, 85);
+  height: 25px;
+  padding: 5px 0px 0px 5px;
+  cursor: pointer;
+  width: 225px;
+}
+
+.tag {
+  border-radius: 10%;
+  background-color: #acacff;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.delete {
+  cursor: pointer;
+  margin-left: 5px;
+}

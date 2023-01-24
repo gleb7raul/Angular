@@ -1,0 +1,21 @@
+<div class="search">
+  <div>
+    <button id="icon-btn" class="serach-icon-wrapper">
+      <img
+        src="../../assets/images/search.png"
+        alt="Play"
+        width="15"
+        height="15"
+        class="search-icon"
+      />
+    </button>
+    <input
+      id="search"
+      type="search"
+      class="courses-search"
+      placeholder="Type to search"
+      (blur)="onTouched()"
+      [formControl]="searchControl"
+    />
+  </div>
+</div>

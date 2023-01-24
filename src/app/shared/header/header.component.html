@@ -1,0 +1,49 @@
+<div class="header-bg">
+  <a class="logo">
+    <div class="oval">
+      <img
+        src="../../assets/images/triangle.png"
+        alt="Play"
+        width="10"
+        height="10"
+        class="triangle"
+      />
+    </div>
+    <div class="video-course">
+      {{ "SHARED.HEADER.TITLE" | translate | uppercase }}
+    </div>
+  </a>
+  <a class="login">
+    <button
+      class="login-actions log-in"
+      *ngIf="!service.isAuthenticated$.getValue()"
+    >
+      <img src="../../assets/images/login.png" alt="login" class="img-login" />
+      <span class="user-actions logIn">{{
+        "SHARED.HEADER.LOGIN" | translate
+      }}</span>
+    </button>
+    <div *ngIf="service.isAuthenticated$ | async" class="user_info_block">
+      <span class="user_info">{{ userName | async }}</span>
+      <button class="login-actions" (click)="onLogout()">
+        <img
+          src="../../assets/images/logout.png"
+          alt="log out"
+          class="img-log-out"
+        />
+        <span class="user-actions logOut">{{
+          "SHARED.HEADER.LOGOUT" | translate
+        }}</span>
+      </button>
+    </div>
+    <select #langSelect (change)="translate.use(langSelect.value)">
+      <option
+        *ngFor="let lang of translate.getLangs()"
+        [value]="lang"
+        [selected]="lang === translate.currentLang"
+      >
+        {{ lang }}
+      </option>
+    </select>
+  </a>
+</div>

@@ -1,0 +1,30 @@
+<div class="label-wrappepr">
+  <label class="block-form">
+    <h3 class="text label-text">
+      {{ "PAGES.COURSES.DATE.TITLE" | translate }}
+    </h3>
+    <h5 class="required text">
+      {{ "PAGES.COURSES.DATE.REQUIRED" | translate }}
+    </h5>
+  </label>
+  <div *ngIf="isInvalid()" class="invalid-field">
+    <div
+      *ngIf="dateControl.errors?.mustBeFormat && !dateControl.errors?.required"
+    >
+      {{ "PAGES.COURSES.DATE.LEN_ERROR" | translate }}
+    </div>
+  </div>
+  <input
+    type="text"
+    placeholder="MM/DD/YYYY"
+    class="input date-time"
+    (blur)="onTouched()"
+    [formControl]="dateControl"
+    [class.is-invalid]="isInvalid()"
+  />
+  <div *ngIf="isInvalid()" class="invalid-field">
+    <div *ngIf="dateControl.errors?.required">
+      {{ "PAGES.COURSES.DATE.REQ_ERROR" | translate }}
+    </div>
+  </div>
+</div>

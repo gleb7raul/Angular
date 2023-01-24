@@ -1,0 +1,53 @@
+.login {
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(29, 30, 38, 0.1),
+    0 2px 10px 0 rgba(29, 30, 38, 0.15);
+  height: 370px;
+  width: 368px;
+  padding: 24px;
+  margin-bottom: 235px;
+  margin-top: 235px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 361px;
+  height: 36px;
+  border: 1px solid #dbd6d6;
+  text-indent: 15px;
+}
+
+.link {
+  color: rgb(103, 103, 255);
+  text-decoration: underline;
+}
+
+.password {
+  margin-top: 10px;
+}
+
+.text-btn {
+  margin-top: 36px;
+  align-items: center;
+}
+
+.login-btn {
+  width: 79px;
+  height: 36px;
+}
+
+.invalid-field {
+  font-size: small;
+  color: red;
+}
+
+.is-invalid {
+  border-color: red;
+}

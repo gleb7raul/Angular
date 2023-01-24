@@ -1,0 +1,51 @@
+<app-header></app-header>
+<form class="login" [formGroup]="reactiveForm" (ngSubmit)="onFormSubmit()">
+  <h1>{{ "PAGES.LOGIN.TITLE" | translate }}</h1>
+  <label class="block-form">
+    <h3>{{ "PAGES.LOGIN.TITLE" | translate }}</h3>
+    <h5>{{ "PAGES.LOGIN.REQUIRED" | translate }}</h5>
+  </label>
+  <input
+    type="text"
+    placeholder="Enter e-mail"
+    class="input"
+    formControlName="login"
+    [class.is-invalid]="login.invalid && (login.dirty || login.touched)"
+  />
+  <div
+    *ngIf="login.invalid && (login.dirty || login.touched)"
+    class="invalid-field"
+  >
+    <div *ngIf="login.errors?.required">
+      {{ "PAGES.LOGIN.REQ_ERROR" | translate }}
+    </div>
+  </div>
+  <label class="block-form password">
+    <h3>{{ "PAGES.LOGIN.PASSWORD" | translate }}</h3>
+    <h5>{{ "PAGES.LOGIN.REQUIRED" | translate }}</h5>
+  </label>
+  <input
+    type="text"
+    placeholder="Enter password"
+    class="input"
+    formControlName="password"
+    [class.is-invalid]="
+      password.invalid && (password.dirty || password.touched)
+    "
+  />
+  <div
+    *ngIf="password.invalid && (password.dirty || password.touched)"
+    class="invalid-field"
+  >
+    <div *ngIf="password.errors?.required">
+      {{ "PAGES.LOGIN.REQ_ERROR" | translate }}
+    </div>
+  </div>
+  <div class="block-form text-btn">
+    <a class="link">{{ "PAGES.LOGIN.FORGOT_PASS" | translate }}</a>
+    <button type="submit" class="login-btn" [disabled]="reactiveForm.invalid">
+      {{ "PAGES.LOGIN.TITLE" | translate }}
+    </button>
+  </div>
+</form>
+<app-footer></app-footer>

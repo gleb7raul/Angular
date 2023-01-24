@@ -1,0 +1,52 @@
+.text {
+  margin: 12px 0px 8px 0px;
+}
+
+.date-time {
+  width: 150px;
+  height: 36px;
+}
+
+.label-wrappepr {
+  width: 157px;
+}
+
+.block-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-text {
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #474a59;
+  font-size: 14px;
+  font-family: "SourceSansPro-Semibold";
+  text-transform: none;
+  text-align: left;
+  font-weight: 600;
+  height: 24px;
+  width: 32px;
+}
+
+.input {
+  height: 36px;
+  border: 1px solid #dbd6d6;
+  text-indent: 5px;
+  margin-right: 24px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.invalid-field {
+  font-size: small;
+  color: red;
+}
+
+.is-invalid {
+  border-color: red;
+}

@@ -1,0 +1,17 @@
+.text {
+  padding-left: 60px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.wrapper {
+  background-color: white;
+  height: 44px;
+  position: relative;
+}
+
+.defaultColor {
+  color: #868996;
+}

@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <b class="breadcrumbs text">
+    <a [routerLink]="['/courses']" [ngClass]="{ defaultColor: !!path }">{{
+      defaultBreadcrumbs
+    }}</a>
+    <span *ngIf="!!path">{{ " / " + path }}</span>
+  </b>
+</div>

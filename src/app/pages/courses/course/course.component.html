@@ -1,0 +1,72 @@
+<div
+  class="wrapper"
+  *ngIf="course"
+  [courseHighlight]="course.creationDate"
+  [ngClass]="{ topRated: course.topRated }"
+>
+  <div class="course-data">
+    <div class="titleWrapper">
+      <div class="title">{{ course.title }}</div>
+      <img
+        *ngIf="course.topRated"
+        src="../../assets/images/star.png"
+        alt="Star"
+        width="15"
+        height="15"
+      />
+    </div>
+    <div class="info">
+      <div class="time-date">
+        <img
+          src="../../assets/images/time.png"
+          alt="Time"
+          width="15"
+          height="15"
+          class="img-time img"
+        />
+        <span class="common-info durationMin">{{
+          course.durationMin | duration
+        }}</span>
+      </div>
+      <div class="date time-date">
+        <img
+          src="../../assets/images/date.png"
+          alt="date"
+          width="15"
+          height="15"
+          class="img-date img"
+        />
+        <span class="common-info creationDate">{{
+          course.creationDate | date
+        }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="descr">{{ course.description }}</div>
+    <div class="actions">
+      <button class="edit" (click)="navigateToEditPage(course.id)">
+        <img
+          src="../../assets/images/edit.png"
+          alt="edit"
+          width="10"
+          height="10"
+          class="img-edit-delete"
+        />
+        <span class="text">{{ "PAGES.COURSES.COURSE.EDIT" | translate }}</span>
+      </button>
+      <button class="delete" (click)="onDelete(course.id)">
+        <img
+          src="../../assets/images/delete.png"
+          alt="delete"
+          width="10"
+          height="10"
+          class="img-edit-delete"
+        />
+        <span class="text">{{
+          "PAGES.COURSES.COURSE.DELETE" | translate
+        }}</span>
+      </button>
+    </div>
+  </div>
+</div>

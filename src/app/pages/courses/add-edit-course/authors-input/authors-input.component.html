@@ -1,0 +1,52 @@
+<div class="label-wrappepr">
+  <label class="block-form">
+    <h3 class="text label-text">
+      {{ "PAGES.COURSES.AUTHORS.TITLE" | translate }}
+    </h3>
+    <h5 class="required text">
+      {{ "PAGES.COURSES.AUTHORS.REQUIRED" | translate }}
+    </h5>
+  </label>
+  <div *ngIf="isInvalid()" class="invalid-field">
+    <div
+      *ngIf="
+        authorsControl.errors?.mustBeAuthor && !authorsControl.errors?.required
+      "
+    >
+      {{ "PAGES.COURSES.AUTHORS.LEN_ERROR" | translate }}
+    </div>
+  </div>
+  <input
+    type="text"
+    placeholder="select authors"
+    class="input date"
+    (blur)="onTouched()"
+    [formControl]="authorsControl"
+    [class.is-invalid]="isInvalid()"
+  />
+  <div *ngIf="isInvalid()" class="invalid-field">
+    <div *ngIf="authorsControl.errors?.required">
+      {{ "PAGES.COURSES.AUTHORS.REQ_ERROR" | translate }}
+    </div>
+  </div>
+  <ul>
+    <li
+      class="author"
+      *ngFor="let item of suggestionItems"
+      key="item.id"
+      (click)="selectAuthor(item)"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+  <span class="tag" *ngFor="let tag of selectedAuthors"
+    >{{ tag.name
+    }}<img
+      src="../../../../assets/images/delete1.png"
+      alt="delete"
+      width="15"
+      height="15"
+      class="delete"
+      (click)="deleteSelectAuthor(tag)"
+  /></span>
+</div>

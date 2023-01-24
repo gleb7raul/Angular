@@ -1,0 +1,65 @@
+<app-header></app-header>
+<app-breadcrumbs class="breadcrumbs" [path]="path"></app-breadcrumbs>
+<div class="wrapper">
+  <h2 class="title">
+    {{ "PAGES.COURSES.ADD_EDIT_COURSE.NEW_COURSE" | translate }}
+  </h2>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onFormSubmit()">
+    <div>
+      <label class="block-form">
+        <h3 class="text label-text">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.TITLE" | translate }}
+        </h3>
+        <h5 class="required text">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.REQUIRED" | translate }}
+        </h5>
+      </label>
+      <input
+        type="text"
+        placeholder="Text input"
+        class="input info-input"
+        formControlName="title"
+        [class.is-invalid]="isInvalid(title)"
+      />
+      <div *ngIf="isInvalid(title)" class="invalid-field">
+        <div *ngIf="title.errors?.required">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.REQ_ERROR" | translate }}
+        </div>
+      </div>
+    </div>
+    <div>
+      <label class="block-form">
+        <h3 class="text label-text">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.DESCR" | translate }}
+        </h3>
+        <h5 class="required text">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.REQUIRED" | translate }}
+        </h5>
+      </label>
+      <textarea
+        type="text"
+        placeholder="Add description"
+        class="text-area info-input"
+        formControlName="description"
+        [class.is-invalid]="isInvalid(description)"
+      ></textarea>
+      <div *ngIf="isInvalid(description)" class="invalid-field">
+        <div *ngIf="description.errors?.required">
+          {{ "PAGES.COURSES.ADD_EDIT_COURSE.REQ_ERROR" | translate }}
+        </div>
+      </div>
+    </div>
+    <app-date-input formControlName="creationDate"></app-date-input>
+    <app-duration-input formControlName="durationMin"></app-duration-input>
+    <app-authors-input formControlName="authors"></app-authors-input>
+    <div class="btn-wrapper">
+      <button class="cancel-btn" (click)="cancel()">
+        {{ "PAGES.COURSES.ADD_EDIT_COURSE.CANCEL" | translate }}
+      </button>
+      <button type="submit" class="save-btn" [disabled]="reactiveForm.invalid">
+        {{ "PAGES.COURSES.ADD_EDIT_COURSE.SAVE" | translate }}
+      </button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,24 @@
+<div>
+  <app-header></app-header>
+  <app-breadcrumbs class="breadcrumbs"></app-breadcrumbs>
+  <app-search (search)="onSearch($event)"></app-search>
+  <app-add-button
+    class="search-button-wrapper"
+    [routerLink]="['new']"
+  ></app-add-button>
+  <section class="wrapper">
+    <div class="emptyCoursesWrapper" *ngIf="!isShowLoadButton">
+      {{ "PAGES.COURSES.COURSES.TEXT" | translate }}
+    </div>
+    <app-course
+      *ngFor="let course of courses"
+      [course]="course"
+      (delete)="deleteCourse($event)"
+    ></app-course>
+    <app-load-more
+      [isShowLoadButton]="isShowLoadButton"
+      (loadMore)="loadMore($event)"
+    ></app-load-more>
+  </section>
+  <app-footer></app-footer>
+</div>
